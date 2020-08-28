@@ -1,28 +1,21 @@
-#Declaracao de variaveis
 double a,b,c
-float f
-str s
-+ 
--
-/
-*
 
-kin>>
-kout<<
-if
-for
->
-<
-==
-kout<<"mane"
+
 k_inicio
-k_fim
+
+kout<<"sua primeira nota"  #comentário
+kin>>a
+
+kout<<"sua segunda nota" 
+kin>>b
+
+c=(a+b)/2
+kout<<"sua media:", c
+
+if(c > 7)
+    kout<<"aprovado"
+else
+    kout<<"reprovado"
 
 ?
-????
-@@@!!
-!!
-\\\\\
-
-_
-:::::
+k_fim    

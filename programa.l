@@ -1,5 +1,5 @@
 %{
-
+ 
 %}
 
 OA "+"|"-"|"*"|"/"
@@ -27,18 +27,18 @@ IGNORE","|"("|")"|" "
 IF"if"
 ELSE"else"
 FOR"for"
-INVALIDO"?"+|"^"+|"@"+|"["+|!+|%+|$+|¨+|_+|'+|\\+|]+|:+
+INVALIDO .
 %%
 
 {KFIM} {
-	printf("FIM DO PROGRAMA: %s", yytext);
+	printf("IDENTIFICADOR DE FINAL DO PROGRAMA: %s", yytext);
 	}
 {IGNORE} {
         }
 
 
 {KINICIO} {
-	printf("INICIO DO PROGRAMA: %s\n", yytext);
+	printf("IDENTIFICADOR DE INICIO DO PROGRAMA: %s\n", yytext);
 
 	}
 {FOR} {
@@ -107,6 +107,7 @@ INVALIDO"?"+|"^"+|"@"+|"["+|!+|%+|$+|¨+|_+|'+|\\+|]+|:+
 {VALORINTEIRO} {
     printf("VALOR INTEIRO: %s\n", yytext);
 }
+
 {INVALIDO} {
     printf("caractere invalido: %s", yytext);
 }
@@ -119,6 +120,7 @@ int main() {
 	fclose(yyin);
     return 0;
 }
+
 int yywrap(){
 	return 1;
 }
